@@ -11,7 +11,7 @@ vars <- colnames(gt)
 
 gt$SampleID <- rownames(gt)
 
-pheno <- read.csv("S26 Phenotypes.csv", header = T)
+pheno <- read.csv("S26 Phenotypes.csv", sep = "\t", header = T)
 pca <- read.csv("maf.imputed.all.eigenvec", sep = "\t", header = T)
 
 for (i in pheno$FID) {
