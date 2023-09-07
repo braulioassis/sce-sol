@@ -1,0 +1,42 @@
+### Calculate LD
+## Alabama
+# Filter positions for top 0.1% LSBL SNPs
+
+for i in {1..19} 22
+do
+vcftools --vcf HC-gtALL.PE* --keep SDsamples.txt --chr scaffold_$i --positions SDchr${i}LSBLtopSNPs.txt --recode --out SD.LSBLscaff${i}LD
+done
+
+# LD for top SNPs +- 25Kb apart
+for i in {1..19} 22
+do
+vcftools --vcf SD.LSBLscaff${i}LD.recode.vcf --geno-r2 --ld-window-bp 50000 --out SDchr${i}-LSBLtop0.1-50kb
+done
+
+## Arkansas
+# Filter positions for top 0.1% LSBL SNPs
+
+for i in {1..12} 15 16 19
+do
+vcftools --vcf HC-gtALL.PE* --keep SFsamples.txt --chr scaffold_$i --positions SFchr${i}LSBLtopSNPs.txt --recode --out SF.LSBLscaff${i}LD
+done
+
+# LD for top SNPs +- 25Kb apart
+for i in {1..12} 15 16 19
+do
+vcftools --vcf SF.LSBLscaff${i}LD.recode.vcf --geno-r2 --ld-window-bp 50000 --out SFchr${i}-LSBLtop0.1-50kb
+done
+
+## Tennessee
+# Filter positions for top 0.1% LSBL SNPs
+
+for i in {1..12} {14..17} 19 20
+do
+vcftools --vcf HC-gtALL.PE* --keep EEsamples.txt --chr scaffold_$i --positions EEchr${i}LSBLtopSNPs.txt --recode --out EE.LSBLscaff${i}LD
+done
+
+# LD for top SNPs +- 25Kb apart
+for i in {1..12} {14..17} 19 20
+do
+vcftools --vcf EE.LSBLscaff${i}LD.recode.vcf --geno-r2 --ld-window-bp 50000 --out EEchr${i}-LSBLtop0.1-50kb
+done
