@@ -1,0 +1,3 @@
+# For demographic analyses (admixture, PCA, neighbor-joining tree), we remove all SNPs where a fixed allele in two populations
+# is also the minor allele in the third population. For Fst between each pair of populations, we likewise remove all where a fixed
+# allele in one population is also the minor allele in the second population.
