@@ -1,0 +1,10 @@
+# Code refers to analyses used in Assis et al.
+# lsbl.R calculates locus-specific branch lengths as in Shriver et al., 2004.
+# getregions.R combines genomic windows of statistical significance into genomic regions
+# perm.R executes a permutation analysis using genomic regions built with getregions.R
+# go.R Uses genomic regions of statistical significance to get overlapping gene names based on the SceUnd 1.0 assembly (Westfall et al., 2021) These gene lists are inputs for
+# functional enrichment analyses using the gProfiler platform (Raudvere et al., 2019).
+
+# Raudvere U, Kolberg L, Kuzmin I, Arak T, Adler P, Peterson H, Vilo J. 2019. G:Profiler: A web server for functional enrichment analysis and conversions of gene lists. Nucleic Acids Res. 47:W191–W198. doi:10.1093/nar/gkz369
+# Shriver MD, Kennedy GC, Parra EJ, Lawson HA, Sonpar V, Huang J, Akey JM, Jones KW. 2004. The genomic distribution of population substructure in four populations using 8,525 autosomal SNPs. Hum Genomics. 1:274–286.
+# Westfall AK, Telemeco RS, Grizante MB, Waits DS, Clark AD, Simpson DY, Klabacka RL, Sullivan AP, Perry GH, Sears MW, et al. 2021. A chromosome-level genome assembly for the eastern fence lizard (Sceloporus undulatus), a reptile model for physiological and evolutionary ecology. Gigascience. 10:1–17. doi:10.1093/gigascience/giab066.
