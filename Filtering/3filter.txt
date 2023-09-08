@@ -1,0 +1,1 @@
+vcftools --vcf HC-gt* --positions SD-SF-EE-positionstokeep.txt --recode --out filtered-three-pops-HC

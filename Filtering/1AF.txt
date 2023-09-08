@@ -1,0 +1,11 @@
+vcftools --vcf HC*vcf \
+--keep SFsamples.txt --freq --out SF
+# Rename column {ALLELE:FREQ} to "SF.a" and "SF.b"
+
+vcftools --vcf HC*vcf \
+--keep SDsamples.txt --freq --out SD
+# Rename column {ALLELE:FREQ} to "SD.a" and "SD.b"
+
+vcftools --vcf HC*vcf \
+--keep EEsamples.txt --freq --out EE
+# Rename column {ALLELE:FREQ} to "EE.a" and "EE.b"
