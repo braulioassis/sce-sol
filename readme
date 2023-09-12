@@ -1,4 +1,4 @@
-# Code refers to analyses used in Assis et al.
+# Code refers to analyses used in Assis et al. Input files are available on Dryad.
 # lsbl.R calculates locus-specific branch lengths as in Shriver et al., 2004.
 # getregions.R combines genomic windows of statistical significance into genomic regions
 # perm.R executes a permutation analysis using genomic regions built with getregions.R
